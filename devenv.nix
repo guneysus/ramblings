@@ -11,6 +11,7 @@
   # https://devenv.sh/packages/
   packages = [
     pkgs.ruby
+    pkgs.git
   ];
 
   # https://devenv.sh/scripts/
