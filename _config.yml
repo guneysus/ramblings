@@ -1,0 +1,16 @@
+theme: minima
+title: Ahmed's ramblings
+description: Software developer specializing in .NET and modern web applications. I build scalable solutions, optimize system performance, and help businesses deliver reliable software faster.
+
+exclude:
+  - .devenv/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
