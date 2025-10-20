@@ -17,6 +17,49 @@
 - Marketing: Astro
 
 
+```mermaid
+flowchart TD
+
+%% === Next.js ===
+subgraph N[Next.js]
+  N1[Content Source: API / CMS / DB] --> N2[Build Step: getStaticProps / getServerSideProps]
+  N2 --> N3["Pre-render Pages (SSG SSR ISR)"]
+  N3 --> N4[Serve via Edge / CDN]
+  N4 --> N5["Client React Hydration (CSR)"]
+end
+
+%% === Docusaurus ===
+subgraph D[Docusaurus]
+  D1[Markdown / MDX Files] --> D2[Static Site Generator]
+  D2 --> D3[Pure Static HTML/CSS/JS]
+  D3 --> D4[Served from CDN or GitHub Pages]
+end
+
+%% === Gatsby ===
+subgraph G[Gatsby]
+  G1[Content Source: CMS / Markdown / APIs] --> G2[GraphQL Data Layer]
+  G2 --> G3[Static Build: React + GraphQL Compile]
+  G3 --> G4[Generated Static HTML + Hydration]
+  G4 --> G5["Served from CDN (Netlify etc)"]
+end
+
+%% === Astro ===
+subgraph A[Astro]
+  A1[Markdown / CMS / API Data] --> A2[Build Step: Partial Hydration Islands]
+  A2 --> A3[Static HTML + Optional JS Islands]
+  A3 --> A4[Zero JS by default – Load islands on demand]
+  A4 --> A5[Served from CDN or Edge Runtime]
+end
+
+%% === Group Labels ===
+classDef framework fill:#222,color:#fff,stroke:#666,stroke-width:1px;
+class N,D,G,A framework;
+
+%% === Layout adjustments ===
+N --- D --- G --- A
+
+```
+
 <!--
 
 
