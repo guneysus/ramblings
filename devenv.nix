@@ -8,20 +8,36 @@
   ...
 }:
 {
+
+  # https://devenv.sh/languages/
+  # languages.ruby.enable = true;
+  # languages.ruby.bundler.enable = true; # Latest 2.7.1 causes issues
+
   # https://devenv.sh/packages/
   packages = [
-    pkgs.ruby
+    pkgs.ruby   # bundler 2.5.22
     pkgs.git
   ];
 
-  # https://devenv.sh/scripts/
-  scripts.dev = {
-    exec = ''
-  bundle install && \
-    bundle exec jekyll serve --livereload --incremental
+  # The Gemfile installs the ruby dependencies inside the environment.
+  enterShell = ''
+    ruby --version
+    bundle version
+    bundle install > /dev/null 2>&1 || true
+    bundle exec jekyll --version
   '';
-    description = "Start jekyll server";
+
+  # https://devenv.sh/processes/
+  processes.jekyll = {
+    # Define the command to run the Jekyll server
+    exec = "bundle exec jekyll serve --livereload --incremental";
   };
+
+  # https://devenv.sh/scripts/
+  scripts.gg.exec = "lazygit";
+
+  # 🚀 SOLUTION: Use 'devenv up jekyll' to manage the long-running process.
+  scripts.dev.exec = "devenv up jekyll";
 
   # See full reference at https://devenv.sh/reference/options/
 }
