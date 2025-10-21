@@ -16,7 +16,10 @@
 
   # https://devenv.sh/scripts/
   scripts.dev = {
-    exec = "bundle install && bundle exec jekyll serve --livereload";
+    exec = ''
+  bundle install && \
+    bundle exec jekyll serve --livereload --incremental
+  '';
     description = "Start jekyll server";
   };
 
