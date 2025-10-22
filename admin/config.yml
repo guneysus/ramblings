@@ -1,0 +1,15 @@
+# config.yml
+
+backend:
+  name: github
+  branch: develop
+  repo: guneysus/guneysus.github.io
+  # use_graphql: true # TODO
+  # preview_context: my-provider/deployment # TODO: Preview <Specifying a status for deploy previews>
+media_folder: 'assets/uploads'
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
+    fields:
+      - { name: Title }
