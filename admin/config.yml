@@ -1,7 +1,8 @@
 # config.yml
 
 backend:
-  name: github
+  # name: github
+  name: git-gateway
   branch: develop
   repo: guneysus/guneysus.github.io
   use_graphql: true
