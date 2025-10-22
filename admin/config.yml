@@ -4,12 +4,18 @@ backend:
   name: github
   branch: develop
   repo: guneysus/guneysus.github.io
-  # use_graphql: true # TODO
-  # preview_context: my-provider/deployment # TODO: Preview <Specifying a status for deploy previews>
+  use_graphql: true
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: '_posts/'
+    folder: 'blog/_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
     fields:
-      - { name: Title }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
