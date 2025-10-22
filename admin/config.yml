@@ -1,9 +1,8 @@
-# config.yml
+publish_mode: editorial_workflow
 
 backend:
-  # name: github
   name: git-gateway
-  branch: develop
+  branch: master
   repo: guneysus/guneysus.github.io
   use_graphql: true
 media_folder: 'assets/uploads'
@@ -14,7 +13,7 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Title', name: 'title', widget: 'string' }
