@@ -3,18 +3,18 @@
     let
       version = "1.10.0";
 system = "aarch64-darwin";
-devenv_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/guneysus.github.io";
-devenv_dotfile = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/guneysus.github.io/.devenv";
+devenv_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/ramblings";
+devenv_dotfile = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/ramblings/.devenv";
 devenv_dotfile_path = ./.devenv;
 devenv_tmpdir = "/var/folders/0b/fyzzmwl97nl4tqqfqrfptwc80000gp/T/";
-devenv_runtime = "/var/folders/0b/fyzzmwl97nl4tqqfqrfptwc80000gp/T/devenv-66b2954";
+devenv_runtime = "/var/folders/0b/fyzzmwl97nl4tqqfqrfptwc80000gp/T/devenv-ab70c73";
 devenv_istesting = false;
 devenv_direnvrc_latest_version = 1;
 container_name = null;
 active_profiles = [ ];
 hostname = "MacBook-Pro.local";
 username = "ahmed";
-git_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/guneysus.github.io";
+git_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/ramblings";
 
         in {
         git-hooks.url = "github:cachix/git-hooks.nix";
@@ -30,18 +30,18 @@ git_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/guneysu
         let
           version = "1.10.0";
 system = "aarch64-darwin";
-devenv_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/guneysus.github.io";
-devenv_dotfile = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/guneysus.github.io/.devenv";
+devenv_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/ramblings";
+devenv_dotfile = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/ramblings/.devenv";
 devenv_dotfile_path = ./.devenv;
 devenv_tmpdir = "/var/folders/0b/fyzzmwl97nl4tqqfqrfptwc80000gp/T/";
-devenv_runtime = "/var/folders/0b/fyzzmwl97nl4tqqfqrfptwc80000gp/T/devenv-66b2954";
+devenv_runtime = "/var/folders/0b/fyzzmwl97nl4tqqfqrfptwc80000gp/T/devenv-ab70c73";
 devenv_istesting = false;
 devenv_direnvrc_latest_version = 1;
 container_name = null;
 active_profiles = [ ];
 hostname = "MacBook-Pro.local";
 username = "ahmed";
-git_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/guneysus.github.io";
+git_root = "/Users/ahmed/Documents/guneysu.dev/repos/github.com/guneysus/ramblings";
 
             devenv =
             if builtins.pathExists (devenv_dotfile_path + "/devenv.json")

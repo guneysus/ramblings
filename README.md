@@ -1,1 +1,1 @@
-![GitHub License](https://img.shields.io/github/license/guneysus/guneysus.github.io)
+> A collection of thoughts, half-formed ideas, and occasional insights — written as they come.
