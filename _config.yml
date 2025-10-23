@@ -1,6 +1,16 @@
-theme: minima
 title: ~ Ahmed's ramblings $
-description: Software developer specializing in .NET and modern web applications. I build scalable solutions, optimize system performance, and help businesses deliver reliable software faster.
+email: ahmed@guneysu.dev
+twitter_username: guneysudev
+github_username:  guneysus
+
+description: >-
+    Software developer specializing in .NET and modern web applications.
+
+    I build scalable solutions, optimize system performance, and help businesses deliver reliable software faster.
+
+theme: minima
+plugins:
+  - jekyll-feed
 
 include: ["admin"]
 exclude:

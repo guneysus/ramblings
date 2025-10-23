@@ -38,6 +38,8 @@
 
   # 🚀 SOLUTION: Use 'devenv up jekyll' to manage the long-running process.
   scripts.dev.exec = "devenv up jekyll";
+  scripts.build.exec = "bundle exec jekyll build";
+  scripts.q.exec = "exit";
 
   # See full reference at https://devenv.sh/reference/options/
 }
