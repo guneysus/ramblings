@@ -3,9 +3,9 @@
 backend:
   # name: git-gateway
   name: github
-  use_graphql: true
+  # use_graphql: true
   branch: master
-  repo: guneysus/ramblings
+  repo: guneysus/guneysus.github.io
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
