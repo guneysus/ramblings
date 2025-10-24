@@ -1,10 +1,11 @@
 # publish_mode: editorial_workflow
 
 backend:
-  name: git-gateway
+  # name: git-gateway
+  name: github
+  use_graphql: true
   branch: master
   repo: guneysus/ramblings
-  use_graphql: true
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
