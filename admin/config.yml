@@ -1,9 +1,9 @@
 # publish_mode: editorial_workflow
 
 backend:
-  # name: git-gateway
-  name: github
-  # use_graphql: true
+  name: git-gateway
+  # name: github
+  use_graphql: true
   branch: master
   repo: guneysus/guneysus.github.io
 media_folder: 'assets/uploads'
