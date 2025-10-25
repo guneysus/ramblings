@@ -7,9 +7,10 @@ Day by day, protecting yourself — your company, employees, and data — is bec
 
 Yet companies keep designing, betting on, and investing in sharper saws.
 
-
-[Quote] “Use the saw, fear the saw.” — Steph Ango (From his latest blog post)
-
+\[Quote] “Use the saw, fear the saw.” — Steph Ango (From his latest blog post)
 
 <https://brave.com/blog/unseeable-prompt-injections/>
 
+[](https://brave.com/blog/unseeable-prompt-injections/)
+
+[<!-- test -->](https://brave.com/blog/unseeable-prompt-injections/)
