@@ -5,7 +5,7 @@ backend:
   # name: github
   use_graphql: true
   branch: master
-  repo: guneysus/guneysus.github.io
+  repo: guneysus/ramblings
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
