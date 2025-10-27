@@ -1,8 +1,7 @@
 ---
-layout: post
 title: "Serverless CMS: DecapCMS"
-date: 2025-10-22T12:00:00.000+03:00
 ---
+
 It took me some to setup DecapCMS with Jekyll pages hosted on Github but eventually I've made it work.
 
 There are things still bugs me but I'm OK with these.
@@ -11,7 +10,7 @@ There are things still bugs me but I'm OK with these.
 
 I did not inspected how DecapCMS fetches the contents and whether the "Fetch Posts via GraphQL" settings is effective.
 
-Since there is only single post before setup, I'm ok with it. 
+Since there is only single post before setup, I'm ok with it.
 
 ## DecapCMS Saves Drafts on Localstorage but still shows "Unsaved Changes"
 

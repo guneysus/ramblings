@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "[Doc] Homelab Jupyter Server Python Package List"
-date: 2025-10-25T20:50:00.000+03:00
-published: false
+slug: "doc-homelab-jupyter-server-python-package-list"
 ---
 
 - [PyPI Packages by Category (with PyPI links)](#pypi-packages-by-category-with-pypi-links)

@@ -30,7 +30,7 @@
   # https://devenv.sh/processes/
   processes.jekyll = {
     # Define the command to run the Jekyll server
-    exec = "bundle exec jekyll serve --livereload --incremental";
+    exec = "bundle exec jekyll serve --livereload --incremental --drafts --unpublished";
   };
 
   # https://devenv.sh/scripts/
