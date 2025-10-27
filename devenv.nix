@@ -37,7 +37,7 @@
   scripts.gg.exec = "lazygit";
 
   # 🚀 SOLUTION: Use 'devenv up jekyll' to manage the long-running process.
-  scripts.dev.exec = "devenv up jekyll";
+  scripts.dev.exec = "bundle exec jekyll serve --livereload --incremental";
   scripts.build.exec = "bundle exec jekyll build";
   scripts.q.exec = "exit";
 
