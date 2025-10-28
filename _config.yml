@@ -16,20 +16,20 @@ description: |-
   I build scalable solutions, optimize system performance, and help businesses deliver reliable software faster.
 theme: minima
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+- jekyll-feed
+- jekyll-sitemap
 include:
-  - admin
+- admin
 exclude:
-  - ".devenv/"
-  - devenv.*
-  - ".sass-cache/"
-  - ".jekyll-cache/"
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+- ".devenv/"
+- devenv.*
+- ".sass-cache/"
+- ".jekyll-cache/"
+- gemfiles/
+- Gemfile
+- Gemfile.lock
+- node_modules/
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/

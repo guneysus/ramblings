@@ -2,7 +2,7 @@
 title: "[CyberChef] Recipe for pre-processing LLM outputs"
 date: 2025-10-28 16:52:05 Z
 tags:
-    - cyberchef
+- cyberchef
 description: ''
 layout: post
 ---
