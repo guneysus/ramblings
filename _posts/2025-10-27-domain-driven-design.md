@@ -1,12 +1,9 @@
 ---
 title: Domain Driven Design
-description: ""
-date: 2025-10-27T18:24:39.529Z
-preview: ""
-tags: []
-categories: []
+date: 2025-10-27 18:24:39 Z
+description: ''
+preview: ''
 ---
-
 
 > AI Generated Content (Used Gemini, NotebookLM and ChatGPT)
 

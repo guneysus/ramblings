@@ -1,7 +1,7 @@
 ---
 title: "[QUOTE] Stop over-engineering for the sake of following what's being marketed."
+date: 2025-10-25 00:00:00 Z
 ---
-
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">• Kafka for 250 KB/s?<br>• Flink for a meal-planning AI Agent sending 2 msg/s?<br><br>Absolutely absurd. It&#39;s high time we stop recommending these overkill big data solutions for small data problems.<br><br>Thankfully, nature seems to be healing. 🌱<br><br>Two recent blog posts with similar names… <a href="https://t.co/5P5jzg5NAI">pic.twitter.com/5P5jzg5NAI</a></p>&mdash; Stanislav Kozlovski (@BdKozlovski) <a href="https://twitter.com/BdKozlovski/status/1981722864844992790?ref_src=twsrc%5Etfw">October 24, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

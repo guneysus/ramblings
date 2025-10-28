@@ -1,28 +1,34 @@
-title: ~ Ahmed's ramblings $
+---
+title: "~ Ahmed's ramblings $"
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: ahmed@guneysu.dev
 twitter_username: guneysudev
-github_username:  guneysus
-
-description: >-
-    Software developer specializing in .NET and modern web applications.
-
-    I build scalable solutions, optimize system performance, and help businesses deliver reliable software faster.
-
+github_username: guneysus
+description: |-
+  Software developer specializing in .NET and modern web applications.
+  I build scalable solutions, optimize system performance, and help businesses deliver reliable software faster.
 theme: minima
 plugins:
-  - jekyll-feed
-
-include: ["admin"]
+- jekyll-feed
+include:
+- admin
 exclude:
-  - .devenv/
-  - devenv.*
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+- ".devenv/"
+- devenv.*
+- ".sass-cache/"
+- ".jekyll-cache/"
+- gemfiles/
+- Gemfile
+- Gemfile.lock
+- node_modules/
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/

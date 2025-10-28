@@ -1,5 +1,6 @@
 ---
 title: The Danger of AI Browsers
+date: 2025-10-22 00:00:00 Z
 ---
 
 Day by day, protecting yourself — your company, employees, and data — is becoming harder and harder.

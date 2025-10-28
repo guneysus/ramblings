@@ -1,10 +1,8 @@
 ---
 title: EF Core Interceptors and Diagnostic Listeners
-description: ""
-date: 2025-10-27T19:40:01.187Z
-preview: ""
-tags: []
-categories: []
+date: 2025-10-27 19:40:01 Z
+description: ''
+preview: ''
 ---
 
 The key difference between EF Core Interceptors[^1] and Diagnostics Listeners [^2] lies in their scope and capability to modify/suppress operations.

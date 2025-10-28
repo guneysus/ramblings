@@ -1,5 +1,6 @@
 ---
-title: "Serverless CMS: DecapCMS"
+title: 'Serverless CMS: DecapCMS'
+date: 2025-10-22 00:00:00 Z
 ---
 
 It took me some to setup DecapCMS with Jekyll pages hosted on Github but eventually I've made it work.

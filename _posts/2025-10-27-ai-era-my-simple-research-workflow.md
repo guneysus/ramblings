@@ -1,5 +1,6 @@
 ---
-title: "AI Era: My Simple Research Workflow"
+title: 'AI Era: My Simple Research Workflow'
+date: 2025-10-27 00:00:00 Z
 ---
 
 You find a huge list of Markdown files from some **awesome repo**.

@@ -1,12 +1,11 @@
 ---
 title: "[CyberChef] Recipe for pre-processing LLM outputs"
-description: ""
-date: 2025-10-28T16:52:05.699Z
-tags: ["cyberchef"]
-categories: []
+date: 2025-10-28 16:52:05 Z
+tags:
+- cyberchef
+description: ''
 layout: post
 ---
-
 
 Had to pre-process markdown output from ChatGPT.
 

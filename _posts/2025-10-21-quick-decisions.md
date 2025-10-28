@@ -1,7 +1,7 @@
 ---
-title: "Quick Decisions: Picking web frameworks by product type"
+title: 'Quick Decisions: Picking web frameworks by product type'
+date: 2025-10-21 00:00:00 Z
 ---
-
 
 - SaaS: Next.js
 - Dashboard: Next.js
