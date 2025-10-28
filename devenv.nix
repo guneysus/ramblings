@@ -30,14 +30,14 @@
   # https://devenv.sh/processes/
   processes.jekyll = {
     # Define the command to run the Jekyll server
-    exec = "bundle exec jekyll serve --livereload --incremental --drafts --unpublished";
+    exec = "bundle exec jekyll serve --livereload";
   };
 
   # https://devenv.sh/scripts/
   scripts.gg.exec = "lazygit";
 
   # 🚀 SOLUTION: Use 'devenv up jekyll' to manage the long-running process.
-  scripts.dev.exec = "bundle exec jekyll serve --livereload --incremental";
+  scripts.dev.exec = "bundle exec jekyll serve --livereload";
   scripts.build.exec = "bundle exec jekyll build";
   scripts.q.exec = "exit";
 
