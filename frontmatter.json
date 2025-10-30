@@ -46,7 +46,9 @@
         {
           "title": "layout",
           "name": "layout",
-          "type": "string"
+          "type": "string",
+          "default": "post",
+          "choices": ["post", "article"]
         }
       ]
     }
