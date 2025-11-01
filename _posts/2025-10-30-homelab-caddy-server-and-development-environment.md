@@ -1,13 +1,10 @@
 ---
 title: Homelab Caddy Server and Development Environment
-description: ""
-date: 2025-10-30T19:07:41.894Z
-preview: ""
-tags: []
-categories: []
+date: 2025-10-30 19:07:41 Z
+description: ''
+preview: ''
 layout: post
 ---
-
 
 ## Stack
 

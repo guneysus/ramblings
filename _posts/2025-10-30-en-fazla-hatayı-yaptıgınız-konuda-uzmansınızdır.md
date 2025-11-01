@@ -1,10 +1,8 @@
 ---
 title: En Fazla Hatayı Yaptığınız Konuda Uzmansınız.
-description: ""
-date: 2025-10-30T13:25:58.361Z
-preview: ""
-tags: []
-categories: []
+date: 2025-10-30 13:25:58 Z
+description: ''
+preview: ''
 layout: post
 ---
 

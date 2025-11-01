@@ -1,13 +1,10 @@
 ---
 title: C# Expert Agents from Microsoft
-description: ""
-date: 2025-11-01T07:17:14.971Z
-preview: ""
-tags: []
-categories: []
+date: 2025-11-01 07:17:14 Z
+description: ''
+preview: ''
 layout: post
 ---
-
 
 David Fowler posted a tweet <https://x.com/davidfowl/status/1984387278656209003> of Tim Heuer's <https://x.com/timheuer/status/1984328591346372743>
 

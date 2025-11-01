@@ -1,12 +1,11 @@
 ---
 title: Homelab Proxmox Playbook
-description: ""
-date: 2025-10-30T09:41:59.451Z
-preview: ""
+date: 2025-10-30 09:41:59 Z
 tags:
-    - proxmox
-    - pve
-categories: []
+- proxmox
+- pve
+description: ''
+preview: ''
 layout: post
 ---
 
