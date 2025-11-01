@@ -13,7 +13,6 @@ David Fowler posted a tweet <https://x.com/davidfowl/status/1984387278656209003>
 
 From Wendy Breiding's dev blog <https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/>
 
-
 [Copilot Custom Agents](https://aka.ms/CustomAgentAnnouncement),
 
 Agents tailored specifically for .NET developers: [C# Expert](https://github.com/github/awesome-copilot/blob/main/agents/CSharpExpert.agent.md) and [WinForms Expert](https://github.com/github/awesome-copilot/blob/main/agents/WinFormsExpert.agent.md).
