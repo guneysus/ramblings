@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Bank Call-Session Notification — Container Architecture",
+    "output": "diagrams/architecture.container.html",
+    "quality_profile": "showcase",
+    "viewBox": [1260, 900],
+    "views": [
+      { "id": "outbound-trigger", "label": "Outbound trigger", "focus": ["agent", "provider", "platform", "adapter"], "note": "Agent orchestrates the provider dial through the DMZ adapter." },
+      { "id": "state-core", "label": "Call session core", "focus": ["adapter", "session-service", "redis", "durable-store", "outbox"], "note": "State machine, TTL'd projection, and transactional outbox." },
+      { "id": "deliver", "label": "Customer delivery", "focus": ["outbox", "notification-service", "mobile", "gateway"], "note": "Push is only a hint; the app reconciles banner state over HTTPS." }
+    ]
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [40, 60],
+    "cols": 6,
+    "gapX": 56,
+    "gapY": 46,
+    "cellW": 150,
+    "cellH": 80
+  },
+  "components": [
+    { "id": "agent", "type": "external", "label": "Call Center Agent", "sublabel": "internal user", "row": 0, "col": 0, "size": [150, 80] },
+    { "id": "platform", "type": "backend", "label": "Call Center Platform", "sublabel": "UI + orchestration", "row": 0, "col": 1, "size": [150, 80] },
+    { "id": "provider", "type": "external", "label": "IVR / Voice Provider", "sublabel": "Twilio-class, untrusted", "row": 2, "col": 0, "size": [150, 80] },
+    { "id": "adapter", "type": "security", "label": "Integration Adapter", "sublabel": "HMAC + anti-replay", "row": 2, "col": 1, "size": [150, 80], "tag": "DMZ" },
+    { "id": "session-service", "type": "backend", "label": "Call Session Service", "sublabel": "state machine", "row": 3, "col": 2, "size": [150, 80] },
+    { "id": "redis", "type": "database", "label": "Redis", "sublabel": "TTL'd projection", "row": 0, "col": 2, "size": [150, 80], "tag": "not source of truth" },
+    { "id": "durable-store", "type": "database", "label": "Durable Store", "sublabel": "SQL / event store", "row": 1, "col": 3, "size": [150, 80], "tag": "system of record" },
+    { "id": "outbox", "type": "messagebus", "label": "Outbox + Event Bus", "sublabel": "Kafka", "row": 1, "col": 4, "size": [150, 80], "tag": "bank.call-session.status.v1" },
+    { "id": "notification-service", "type": "backend", "label": "Notification Service", "sublabel": "FCM / APNs", "row": 0, "col": 4, "size": [150, 80], "tag": "no PII" },
+    { "id": "gateway", "type": "backend", "label": "API Gateway / BFF", "sublabel": "token identity", "row": 2, "col": 4, "size": [150, 80] },
+    { "id": "mobile", "type": "external", "label": "Customer Mobile App", "sublabel": "iOS / Android", "row": 2, "col": 5, "size": [150, 80] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Bank Core", "wraps": ["platform", "adapter", "session-service", "redis", "durable-store", "outbox", "notification-service", "gateway"] },
+    { "kind": "security-group", "label": "DMZ Trust Boundary", "wraps": ["adapter"], "pad": 18 }
+  ],
+  "connections": [
+    { "id": "agent-platform", "from": "agent", "to": "platform", "label": "POST /internal/v1/call-sessions · HTTPS · sync", "variant": "emphasis", "labelAt": [360, 150] },
+    { "id": "platform-provider", "from": "platform", "to": "provider", "label": "dial · HTTPS · sync" },
+    { "id": "provider-adapter", "from": "provider", "to": "adapter", "label": "POST /v1/integrations/voice/…/events · HTTPS/mTLS · sync", "variant": "security", "labelAt": [218, 410] },
+    { "id": "adapter-session", "from": "adapter", "to": "session-service", "label": "POST normalized event · mTLS · sync", "variant": "emphasis" },
+    { "id": "session-redis", "from": "session-service", "to": "redis", "label": "conditional update + TTL · Redis · sync" },
+    { "id": "session-store", "from": "session-service", "to": "durable-store", "label": "transactional write · SQL · sync", "variant": "emphasis" },
+    { "id": "session-outbox", "from": "session-service", "to": "outbox", "label": "outbox row · txn", "variant": "dashed", "labelAt": [730, 330] },
+    { "id": "outbox-notify", "from": "outbox", "to": "notification-service", "label": "CALL_SESSION_STATUS_CHANGED · Kafka · async", "variant": "emphasis", "labelAt": [1160, 286] },
+    { "id": "notify-mobile", "from": "notification-service", "to": "mobile", "label": "push \"action: REFRESH\" · FCM/APNs · async", "variant": "dashed", "labelAt": [1042, 280] },
+    { "id": "mobile-gateway", "from": "mobile", "to": "gateway", "label": "GET /mobile/v1/me/call-sessions/active · HTTPS · sync", "variant": "emphasis", "labelAt": [1042, 406] },
+    { "id": "gateway-session", "from": "gateway", "to": "session-service", "label": "query active banner · mTLS · sync" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Outbound trigger", "items": ["Agent posts an idempotent call session", "Provider dial is placed from the platform", "Untrusted provider webhooks are drawn into the DMZ"] },
+    { "dot": "emerald", "title": "State + projection", "items": ["Session Service enforces a forward-only state machine", "Redis is a TTL'd projection, never the system of record", "Every state change writes the outbox transactionally"] },
+    { "dot": "rose", "title": "Delivery", "items": ["Push carries only sessionId/status/displayUntil — no PII", "Mobile reconciles over the gateway, push is only a hint", "API Gateway derives customer identity from the token"] }
+  ]
+}
