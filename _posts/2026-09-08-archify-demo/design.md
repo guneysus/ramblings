@@ -1,8 +1,3 @@
----
-title: Archify Demo/design
-date: 2026-09-08 00:00:00 Z
----
-
 Use Archify to turn this plain-language system description into a high-level architecture diagram:
 
 
